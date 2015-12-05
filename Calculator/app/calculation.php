@@ -4,7 +4,7 @@
 session_start();
 
 //Var. errors koja ce biti niz za cuvanje gresaka uz forme
-$errors = [];
+$errors = array();
 
 //Provjeravamo da li postoji Serverska Superglobalna varijabla $_POST
 
@@ -19,11 +19,11 @@ if (!isset($_POST))
 if (isset($_POST['number1'], $_POST['number2'], $_POST['operation']))
 {
 	//Stvaranje niza u kojem cemo cuvati vrijednosti polja iz forme
-	$fields = [
+	$fields = array(
 		'number1' => $_POST['number1'],
 		'number2' => $_POST['number2'],
 		'operation' => $_POST['operation'],
-	];
+	);
 
 	//Prolaz kroz niz vrijednosti iz forme
 
@@ -38,8 +38,8 @@ if (isset($_POST['number1'], $_POST['number2'], $_POST['operation']))
 	}
 
 	//Smijestamo vrijednosti iz niza u kome cuvamo vrijednosti iz forme u obicne var. koje lakse mozemo korisititi u racunanju
-	$number1 = $fields['number1'];
-	$number2 = $fields['number2'];
+	$number1 = intval($fields['number1']); //Sa intval() metodom vracamo brojnu vrijednost varijable
+	$number2 = intval($fields['number2']);
 	$operation = $fields['operation'];
 
 	//Provjera da li su unijeti podatci u prva dva polja iz forme brojevi
@@ -60,6 +60,12 @@ if (isset($_POST['number1'], $_POST['number2'], $_POST['operation']))
 				$result = $number1 * $number2;
 			break;
 			case '/':
+				if ($number2 === 0)
+				{
+					$errors[] = 'Cannot divide by zero.';
+					break;
+				}
+
 				$result = $number1 / $number2;
 			break;
 		}
