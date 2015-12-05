@@ -8,8 +8,8 @@ require_once '../functions/security.php';
 
 //Provjera da li postoje neki podatci u sesiji koji se prenose sa calculation.php fajla za obradu podataka
 //i ako postoje smijstamo te podatake u varijable da bi ih lakse mogli korsititi na ovoj stranici
-$errors = isset($_SESSION['errors']) ? $_SESSION['errors'] : []; //Greske
-$fields = isset($_SESSION['fields']) ? $_SESSION['fields'] : []; //Vrijednosti iz polja od forme
+$errors = isset($_SESSION['errors']) ? $_SESSION['errors'] : array(); //Greske
+$fields = isset($_SESSION['fields']) ? $_SESSION['fields'] : array(); //Vrijednosti iz polja od forme
 $result = isset($_SESSION['result']) ? $_SESSION['result'] : ''; //Rezultat racunanja
 
 ?>
@@ -60,7 +60,7 @@ $result = isset($_SESSION['result']) ? $_SESSION['result'] : ''; //Rezultat racu
 							<div class="form-group">
 								<label for="operations">Math Operations</label>
 								<select class="form-control" id="operations" name="operation">
-									<option>Operations</option>
+									<option></option>
 									<option value="+">+</option>
 									<option value="-">-</option>
 									<option value="*">*</option>
