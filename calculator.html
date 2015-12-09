@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Calculator</title>
+		<!-- Latest compiled and minified CSS Bootstrap-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="container">
+			<!--Forma za unos podataka-->
+			<h1 class="text-center">Calculator</h1>
+			<div class="col-md-6 col-md-offset-3">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<form action="" method="post" autocomplete="off">
+							<div class="form-group">
+								<label for="exampleInputEmail1">Enter First Number</label>
+								<input type="text" id="number1" class="form-control" id="exampleInputEmail1" placeholder="Enter some number" >
+							</div>
+
+							<div class="form-group">
+								<label for="exampleInputEmail1">Enter Second Number</label>
+								<input type="text" id="number2" class="form-control" id="exampleInputEmail1" placeholder="Enter some number">
+							</div>
+
+							<div class="form-group">
+								<label for="operations">Math Operations</label>
+								<select class="form-control" id="operations" name="operation">
+									<option></option>
+									<option value="+">+</option>
+									<option value="-">-</option>
+									<option value="*">*</option>
+									<option value="/">/</option>
+								</select>
+							</div>
+							<!--Pozivanje funkcije Calculate() na klik dugmeta submit-->
+							<button class="btn btn-default" onclick="Calculate();">Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
+<script>
+	function Calculate()
+	{
+		//Setiranje varijabli i stvaranje varijabli
+		var number1, number2, operations, result;
+
+		//Kupljenje podataka iz forme i smijestanje u var. i provjera sa 
+		//Number()  funk da li je vrijednost broj i String funk. da li je operator string znak
+
+		number1 = Number(document.getElementById('number1').value); //
+		number2 = Number(document.getElementById('number2').value);
+		operations = String(document.getElementById('operations').value);
+
+		//Provjera da li je var. prazna tj. da li su polja forem prazna
+		if (number1 == '' && number2 == '' && operations == '')
+		{
+			alert('Please fill all fields.');
+		}
+		else
+		{	
+			//Provjera operatora i izvrasavanje matematicke operacije
+			switch(operations)
+			{
+				case '+':
+					result = number1 + number2;
+				break;
+				case '-':
+					result = number1 - number2;
+				break;
+				case '*':
+					result = number1 * number2;
+				break;
+				case '/':
+					//Provjera da li je drugi broj nula posto se ne moze dijeliti sa nulom
+					if (number2 === 0)
+					{
+						alert('You can\'t devide by zero.');
+					}
+
+					result = number1 / number2;
+				break;
+			}
+
+			//Prikazivanje rezultata
+			alert(result);
+		}	
+	}
+</script>
