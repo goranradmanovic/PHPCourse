@@ -1,0 +1,40 @@
+//Json section
+.json
+	padding: 20px
+	text-align: justify
+
+.code
+	padding: 10px 10px 10px 0
+
+	+element('paragraph')
+		margin: 0
+		text-align: center
+		color: $text-color
+
+	+element('elements')
+		+modifier('json')
+			height:	580px
+			margin: 0 auto
+			padding: 0
+			background-color: #F0F0F0
+
+		&::-webkit-scrollbar
+			width: 0.5em
+
+		&::-webkit-scrollbar-track
+			box-shadow: inset 0 0 6px rgba(0, 0, 0, .3)
+
+		&::-webkit-scrollbar-thumb
+			background-color: darkgray
+			outline: 1px solid slategray
+
+		+modifier('whitespace')
+			width: 100%
+			padding: 0 20px
+			box-sizing: border-box
+			white-space: pre-line
+
+	+element('source')
+		font-size: 10px
+		text-align: center
+		text-transform: italic

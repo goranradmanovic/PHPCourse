@@ -1,0 +1,64 @@
+<div class="row">
+	<h2 class="col col--12-of-12 col--centered title__sub">Canvas</h2>
+	
+	<div class="col col--1-of-2">
+			<pre class="code__elements code__elements--canvas">
+				<p class="code__paragraph"><span class="italic">Canvas</span> primjer (crtanje crvenog pravougaonika).</p>
+				<div class="code__elements--whitespace">
+					<code>
+						&ltcanvas id="example" width="200" height="200"&gt
+							&nbsp;&nbsp;This text is displayed if your browser does not support HTML5 Canvas.
+						&lt/canvas&gt
+
+						&ltscript&gt
+							&nbsp;&nbsp;var example = document.getElementById('example');
+							&nbsp;&nbsp;var context = example.getContext('2d');
+							&nbsp;&nbsp;context.fillStyle = 'red';
+							&nbsp;&nbsp;context.fillRect(30, 30, 50, 50);
+						&lt/script&gt
+					</code>
+				</div>
+			</pre>	
+		<p class="code__source">Izvor Wikipedia <a href="https://en.wikipedia.org/wiki/Canvas_element#Example" target="_blank">Canvas_element#Example</a></p>
+	</div>
+
+	<div class="col col--1-of-2 canvas__text">
+		<p><span class="italic">Canvas</span> je novi <span class="italic">HTML5 tag</span> element koji omogućava dinamičko, skriptabilno prikazivanje 2D objekata i <span class="italic">bitmap</span> slika (definirani prostor na displeju i boja za svaki piksel ili bit). <span class="italic">Canvas</span> je inicijalno predstavljen od strane <span class="italic">Apple</span>-a u svrhu korištenja u njihovom <span class="italic">Mac OS X Webkit</span> komponenti 2004.god. pomoću koje su pokretali aplikacije kao što su <span class="italic">Dashboard</span> i <span class="italic">Safari</span> pretrživač.</p>
+		<p><span class="italic">HTML &ltcanvas&gt </span>element se koristi za crtanje grafike uz pomoc nekog skriptnog jezika,najčešće <span class="italic">JavaScript</span>-a. <span class="italic">Canvas</span> element  je samo kontejner za grafiku. Da bi nesto nacrtali moramo koristiti neki skriptni jezik. <span class="italic">Canvas</span> ima nekoliko metoda za crtanje putanja, kvadrata, krugova, tekstova i dodavanja slika.</p>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col col--1-of-2 canvas__text">
+		<p><span class="italic">Canvas</span> po uobičajenim postavkama nema granicu niti sadržaj, zato moramo uvijek navesti <span class="italic">id</span> atribut koji nam služi za referenciranje u nekom skriptnom jeziku i atribut širine i visine da definiramo veličinu <span class="italic">canvas</span>-a koje su po uobičajenim postavkama namještene na 200 piksela za širinu i 150 piksela za visinu. <span class="italic">Canvas</span> ima zapravo dvije veličine, prva je veličina samog <span class="italic">canvas</span> elementa,a druga veličina površine za crtanje. <span class="italic">CSS</span> atributi za širinu i visinu se odnose samo na veličinu <span class="italic">canvas</span> elementa, ali ne i na veličinu za crtanje.</p>
+		<p>Za razliku od <span class="italic">SVG</span>-a koji je vektorski objekat i grafika, <span class="italic">canvas</span> se iscrtava momentalno u pretrživaču i po zvršetku iscrtavanja sistem “zaboravlja” crtež,tako da ako se promjeni pozicija ili nesto drugo,čitav crtež se mora izpočtka nacrtati.</p>
+	</div>
+
+	<div class="col col--1-of-2">
+			<pre class="code__elements code__elements--canvas">
+				<p class="code__paragraph"><span class="italic">Canvas</span> primjer (crtanje linearnog gradijenta).</p>
+				<div class="code__elements--whitespace">
+					<code>
+						&ltcanvas id="example" width="200" height="200"&gt
+							&nbsp;&nbsp;This text is displayed if your browser does not support HTML5 Canvas.
+						&lt/canvas&gt
+						&ltscript&gt
+							&nbsp;&nbsp;var c = document.getElementById("example");
+							&nbsp;&nbsp;var ctx = c.getContext("2d");
+
+							&nbsp;&nbsp;// Create gradient
+							&nbsp;&nbsp;var grd = ctx.createLinearGradient(0, 0, 200, 0);
+							&nbsp;&nbsp;grd.addColorStop(0, "red");
+							&nbsp;&nbsp;grd.addColorStop(1, "white");
+
+							&nbsp;&nbsp;// Fill with gradient
+							&nbsp;&nbsp;ctx.fillStyle = grd;
+							&nbsp;&nbsp;ctx.fillRect(10, 10, 150, 80);
+						&lt/script&gt
+					</code>
+				</div>
+			</pre>
+		
+		<p class="code__source">Izvor Wikipedia <a href="http://www.w3schools.com/html/html5_canvas.asp" target="_blank"><span class="italic">Canvas</span></a></p>
+	</div>
+</div>

@@ -1,0 +1,50 @@
+<div class="row">
+	<h2 class="col col--12-of-12 col--centered title__sub">JSON</h2>
+	<div class="col col--7-of-12 col--m-1-of-3 col--s-1-of-1">
+		<div class="json" id="json">
+			<p><span class="italic">JSON</span> je skracenica od (<span class="italic">JavaScript Object Notation</span>) i on je oblik podatka koji je lako dijeljiv izmedju raličitih programskih jezika. To je oblik teksta koji je lako čitljiv za ljude i sastoji se od  para atributa i njegove vrijednosti. Internte media tip za <span class="italic">JSON</span> je <span class="italic">application/json</span>, a <span class="italic">file</span> ekstenzija je <span class="italic">.json</span> . <span class="italic">JSON</span> oblik podatka je orginalno stvorio Douglas Crockford.</p>
+			<p>Tipovi podataka koji se mogu čuvati i pisati u <span class="italic">JSON</span> formatu su brojevi (<span class="italic">number</span>),stim da <span class="italic">JSON</span> ne pravi razliku izmedju broja i broja sa decimalnim zarezom (<span class="italic">float</span>), nizove tekstualnih karaktera (<span class="italic">string</span>) koji su razdvojeni sa duplim navodnicima ( “ “ ) i koji podržavaju sintaksu sa kosom linijom unazad (<span class="italic">backslash</span> \ ) za izbjegavanje karaktera.</p>
+			<p><span class="italic">Boolean</span> vrijednost istinito ili lazno (<span class="italic">true</span> ili <span class="italic">false</span>), <span class="italic">JSON</span> podrzava i niz (<span class="italic">array</span>) koji je uredjena lista,a koja se moze sastojati od više elemenata različith tipova podataka. Nizovi koriste četvrtaste zagrade ( [ ] ) i vrijednosti su razdovjite zarezom.</p>
+			<p>Objekti su neuredjene kolekcije koje se sastoje od parova imena i njihovih vrijednosti,imena su kljucevi niza u obliku stringa. Objekti se označavaju sa vitičastim zagradama ( { } ) i sa zarezom je razdvojit svaki par,dok su imena razdvojita sa dvotačkom ( : ) od svoje vrijednosti. <span class="italic">Null</span> je prazan tip podatka i označava se sa <span class="italic">null</span>.</p>
+			<p>Prazan prostor ili<span class="italic"> whitespace</span> je dozvoljen i ignorise se oko i izmedju elemenata ali se ne ignorise unutar <span class="italic">string</span> imena ili vrijednosti. Medjutim samo četri specifična karaktera se smatraju za prazan prostor,a to su space, horizontalni <span class="italic">tab</span>, <span class="italic">line feed</span> i <span class="italic">carriage return</span>.</p>
+			<p><span class="italic">JSON</span> ne podržava i ne dozvoljava bilo kakav komentar.</p>
+			<p><span class="italic">JSON</span> dokumenti se mogu enkodirati sa <span class="italic">UTF-8, UTF-16 ili UTF-32</span>, ali uobičajeni način enkodiranja je <span class="italic">UTF-8</span>. Ovi načini enkodiranja podrzavaju sve <span class="italic">Unicode</span> karaktere. </p>
+		</div>
+	</div>
+	<div class="col col--5-of-12 col--m-1-of-3 col--s-1-of-1">
+		<div class="code">
+			<pre class="code__elements code__elements--json">
+				<p class="code__paragraph">Primjer <span class="italic">JSON</span> objekta sa svim tipovima podataka.</p>
+				<div class="code__elements--whitespace">
+					<code>
+						{
+							&nbsp;"firstName": "John",
+							&nbsp;"lastName": "Smith",
+							&nbsp;"isAlive": true,
+							&nbsp;"age": 25,
+							&nbsp;"address": {
+							&nbsp;&nbsp;&nbsp;"streetAddress": "21 2nd Street",
+							&nbsp;&nbsp;&nbsp;"city": "New York",
+							&nbsp;&nbsp;&nbsp;"state": "NY",
+							&nbsp;&nbsp;&nbsp;"postalCode": "10021-3100"
+													&nbsp;&nbsp;&nbsp;},
+							&nbsp;"phoneNumbers": [
+													&nbsp;&nbsp;&nbsp;{
+							&nbsp;&nbsp;&nbsp;&nbsp;"type": "home",
+							&nbsp;&nbsp;&nbsp;&nbsp;"number": "212 555-1234"
+													&nbsp;&nbsp;&nbsp;},
+													&nbsp;&nbsp;&nbsp;{
+							&nbsp;&nbsp;&nbsp;&nbsp;"type": "office",
+							&nbsp;&nbsp;&nbsp;&nbsp;"number": "646 555-4567"
+													&nbsp;&nbsp;&nbsp;}
+												&nbsp;],
+							&nbsp;"children": [],
+							&nbsp;"spouse": null
+						}
+					</code>
+				</div>
+			</pre>
+			<p class="code__source">Izvor Wikipedia <a href="https://en.wikipedia.org/wiki/JSON#Example" target="_blank">JSON#Example</a></p>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,29 @@
+//Header section.
+.header
+	margin: 50px auto 50px auto
+
+.title
+	width: 40%
+	margin: 10px auto
+	padding: 30px 10px
+	letter-spacing: 0,05em
+	border: 7px solid white
+	text-align: center
+
+	@media (max-width: 900px)
+		font-size: 1.2em
+	@media (max-width: 640px)
+		font-size: 1.2em
+	@media (max-width: 320px)
+		font-size: 1.2em
+
+	+element('kicker')
+		margin: 50px auto 0 auto
+		text-align: center
+		font-weight: 700
+		text-transform: uppercase
+		letter-spacing: 0,05em
+		line-height: 1
+
+	+element('sub')
+		text-align: center

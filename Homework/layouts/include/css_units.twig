@@ -1,0 +1,299 @@
+<div class="row">
+	<h2 class="col col--12-of-12 col--centered title__sub">Css Units</h2>
+
+	<div class="col col--2-of-5 col--centered">
+		<p class="css__intro">Trenutno postoji petnaest <span class="italic">css</span> mjernih jedinica koje podržavaju pretrazivači. Ove mjeren jedinice mozemo podijeliti u dvije grupe,a to su apsolutne mijerne jedinice i relativne.</p>
+	</div>
+
+	<div class="row">
+		<div class="col col--2-of-6 col--push-1-of-6">
+			<h3 class="title__sub">Apsolutne mjerne jedinice su:</h3>
+			<div class="units">
+				<ul class="units__list">
+					<span class="italic"><li>Pixels (px)</li>
+					<li>Inches (in)</li>
+					<li>Centimeters (cm)</li>
+					<li>Millimeters (mm)</li>
+					<li>Points (pt)</li>
+					<li>Picas (pc)</li></span>
+				</ul>
+			</div>
+		</div>
+		<div class="col col--2-of-6">
+			<h3 class="title__sub">Relativne mjerne jedinice su:</h3>
+			<div class="units">
+				<ul class="units__list">
+					<span class="italic"><li>Percentages (%)</li>
+					<li>Font-sizes (em & rem)</li>
+					<li>Charachter-sizes (ex & ch)</li>
+					<li>Viewport Dimensions (vw & vh)</li>
+					<li>Viewport Max (vmax) </li>
+					<li>Viewport Min (vmin)</li></span>
+				</ul>
+			</div>
+		</div>
+	</div>
+		
+	<div class="row">
+		<div class="col col--6-of-12 col--m-1-of-3 col--s-1-of-1 col--centered">
+			<h4 class="title__sub">Relativne <span class="italic">CSS</span> mjerene jedinice</h4>
+			<p class="css__intro--relative">Relativne mjerene jedinice dobijaju svoju veličinu u zavisnosti od nečega drugog. Postoje tri stvari na osnovu kojih relativne jedinice baziraju svoju veličinu,a to su roditeljske dimenzije (%), trenutno deklarisani <span class="italic">font</span> atributi (em, rem, ex, ch) i velicina <span class="italic">viewport</span>-a.</p>
+			<div class="code">
+				<pre class="code__elements code__elements--css">
+					<p class="code__paragraph">Primjer <span class="italic">CSS</span> Procenti ( % ).</p>
+					<div class="code__elements--whitespace">
+						<code>
+							&ltdiv class=”example”&gt
+								&nbsp;&ltdiv class=”parent”&gt
+									&nbsp;&nbsp;&ltdiv class=”child”&lt/div&gt
+								&nbsp;&lt/div&gt
+							&lt/div>
+
+							&ltstyle&gt
+								&nbsp;.parent {
+									&nbsp;&nbsp;&nbsp;width: 400px;
+									&nbsp;&nbsp;&nbsp;height: 400px;
+									&nbsp;&nbsp;&nbsp;background: hsla(196, 100%, 55%, 0.3);
+								&nbsp;}
+								&nbsp;.child {
+									&nbsp;&nbsp;&nbsp;width: 50%;
+									&nbsp;&nbsp;&nbsp;height: 50%;
+									&nbsp;&nbsp;&nbsp;background: hsla(59, 100%, 55%, 0.3);
+								&nbsp;}
+							&lt/style&gt
+						</code>
+					</div>
+				</pre>
+				<p class="code__source">Izvor Youtube <a href="https://www.youtube.com/watch?v=qrduUUdxBSY" target="_blank"><span class="italic">CSS Units</span></a></p>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<h4 class="title__sub"><span class="italic">CSS viewport</span> mjerene jedinice</h4>
+		<div class="col col--1-of-3 col--m-1-of-3 col--s-1-of-1">
+			<div class="code__elements--text">
+				<p>Postoje četri mjerene jedinice koje su bazirane na <span class="italic">viewport</span> veličini,a to su <span class="italic">vw (viewport width), vh (viewport height), vmin (viewport minimum), vmax (viewport maximum)</span>.</p>
+				<p><span class="italic">Viewport width (vw)</span> i <span class="italic">viewport height (vh)</span> dijele <span class="italic">viewport</span> tj. veličinu <span class="italic">display</span>-a na mrezu od 100x100 jedinica.</p>
+				<p><span class="italic">Viewport Max</span> i <span class="italic">Viewport Min</span> (oznacavaju <span class="italic">viewport maximum</span> ili <span class="italic">minimum</span>) , isto dobijaju svoje mijere kao <span class="italic">vw</span> ili <span class="italic">vh</span> i dijele velicinu displaya na 100x100 mrezu,ali referenciraju ili širinu ili visinu u zavisnosti šta je veće ili manje,i u zavisnosti šta od ovih jedinica koristimo.</p>
+			</div>
+		</div>
+		<div class="col col--1-of-3">
+			<div class="code">
+				<pre class="code__elements code__elements--css">
+					<p class="code__paragraph">Primjer <span class="italic">CSS viewport (vw & vh)</span>.</p>
+					<div class="code__elements--whitespace">
+						<code>
+							&ltdiv class=”example”&gt
+								&nbsp;&ltdiv class=”parent”&gt
+									&nbsp;&nbsp;&ltdiv class=”vw”&lt/div&gt
+								&nbsp;&lt/div&gt
+							&lt/div>
+
+							&ltstyle&gt
+								&nbsp;.vw {
+									&nbsp;&nbsp;&nbsp;width: 50vw; /*50vh responsive designe*/
+									&nbsp;&nbsp;&nbsp;height: 50vh; /*50vw*/
+									&nbsp;&nbsp;&nbsp;background: hsla(196, 100%, 55%, 0.3);
+								&nbsp;}
+							&lt/style&gt
+						</code>
+					</div>
+				</pre>
+				<p class="code__source">Izvor Youtube <a href="https://www.youtube.com/watch?v=qrduUUdxBSY" target="_blank"><span class="italic">CSS Units</span></a></p>
+			</div>
+		</div>
+		<div class="col col--1-of-3">
+			<div class="code">
+				<pre class="code__elements code__elements--css">
+					<p class="code__paragraph">Primjer <span class="italic">CSS viewport (vmin & vmax)</span>.</p>
+					<div class="code__elements--whitespace">
+						<code>
+							&ltdiv class=”example”&gt
+								&nbsp;&ltdiv class=”parent”&gt
+									&nbsp;&nbsp;&ltdiv class=”vmin”&lt/div&gt
+								&nbsp;&lt/div&gt
+							&lt/div>
+
+							&ltstyle&gt
+								&nbsp;.vmin {
+									&nbsp;&nbsp;&nbsp;width: 50vmin; /*50vmax*/
+									&nbsp;&nbsp;&nbsp;height: 400px;
+									&nbsp;&nbsp;&nbsp;background: hsla(196, 100%, 55%, 0.3);
+								&nbsp;}
+							&lt/style&gt
+						</code>
+					</div>
+				</pre>
+				<p class="code__source">Izvor Youtube <a href="https://www.youtube.com/watch?v=qrduUUdxBSY" target="_blank"><span class="italic">CSS Units</span></a></p>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<h4 class="title__sub"><span class="italic">CSS font</span> mjerene jedinice</h4>
+	
+		<div class="col col--1-of-3">
+			<div class="code code__elements--text">
+				<pre class="code__elements code__elements--css">
+					<p class="code__paragraph">Primjer <span class="italic">CSS font (ex)</span>.</p>
+					<div class="code__elements--whitespace">
+						<code>
+							&ltdiv class=”example”&gt
+								&nbsp;&ltdiv class=”ex”&gt
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x 0
+								&nbsp;&lt/div&gt
+							&lt/div>
+
+							&ltstyle&gt
+								&nbsp;.ex {
+									&nbsp;&nbsp;&nbsp;width: 100%;
+									&nbsp;&nbsp;&nbsp;height: 1ex;
+									&nbsp;&nbsp;&nbsp;background: hsla(196, 100%, 55%, 0.3);
+								&nbsp;}
+							&lt/style&gt
+						</code>
+					</div>
+				</pre>
+				<p class="code__source">Izvor Youtube <a href="https://www.youtube.com/watch?v=qrduUUdxBSY" target="_blank"><span class="italic">CSS Units</span></a></p>
+			</div>
+		</div>
+		<div class="col col--1-of-3">
+			<div class="code">
+				<pre class="code__elements code__elements--css">
+					<p class="code__paragraph">Primjer <span class="italic">CSS font (ch)</span>.</p>
+					<div class="code__elements--whitespace">
+						<code>
+							&ltdiv class=”example”&gt
+								&nbsp;&ltdiv class=”ch”&gt
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0
+								&nbsp;&lt/div&gt
+							&lt/div>
+
+							&ltstyle&gt
+								&nbsp;.ch {
+									&nbsp;&nbsp;&nbsp;width: 100%;
+									&nbsp;&nbsp;&nbsp;height: 1ch;
+									&nbsp;&nbsp;&nbsp;background: hsla(196, 100%, 55%, 0.3);
+								&nbsp;}
+							&lt/style&gt>
+						</code>
+					</div>
+				</pre>
+				<p class="code__source">Izvor Youtube <a href="https://www.youtube.com/watch?v=qrduUUdxBSY" target="_blank"><span class="italic">CSS Units</span></a></p>
+			</div>
+		</div>
+
+		<div class="col col--1-of-3 col--m-1-of-3 col--s-1-of-1">
+			<div>
+				<p>Postoje četri <span class="italic">font</span> relativne mjerene jedinice za širinu,a to su <span class="italic">ex (“x” height)</span> i <span class="italic">ch (“0” width)</span> i <span class="italic">em (font-size)</span> i <span class="italic">rem (:root font-size)</span>.</p>
+				<p>Mjerna jedinica <span class="italic">ex</span> je baziran na visini <span class="italic">‘x’</span> karaktera od font porodice koju koristimo.</p>
+				<p>Mjerna jedinica <span class="italic">ch</span> je bazirana na širini broja 0.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col col--1-of-3 col--m-1-of-3 col--s-1-of-1">
+			<div class="code__elements--text">
+				<p>Mjerene jedinice <span class="italic">em</span> i <span class="italic">rem</span> su bazirane na <span class="italic">font</span> veličini. <span class="italic">Em</span> se odnosi na velicinu fonta koju koristi roditeljski element.</p>
+				<p>Mjerna jedinica <span class="italic">rem</span> je bazirana na velicini fonta korjenskog elementa.</p>
+			</div>
+		</div>
+		<div class="col col--1-of-3">
+			<div class="code">
+				<pre class="code__elements code__elements--css">
+					<p class="code__paragraph">Primjer <span class="italic">CSS font (em)</span>.</p>
+					<div class="code__elements--whitespace">
+						<code>
+							&ltdiv class=”example”&gt
+								&nbsp;&ltdiv class=”em”&gt
+								&nbsp;&lt/div&gt
+							&lt/div&gt
+
+							&ltstyle&gt
+								&nbsp;.example {
+									&nbsp;&nbsp;&nbsp;font-size: 10px;
+								&nbsp;}
+								&nbsp;.em {
+									&nbsp;&nbsp;&nbsp;width: 1em; /* 1 x 10px */
+									&nbsp;&nbsp;&nbsp;height: 1em;
+									&nbsp;&nbsp;&nbsp;background: hsla(196, 100%, 55%, 0.3);
+								&nbsp;}
+							&lt/style&gt
+						</code>
+					</div>
+				</pre>
+				<p class="code__source">Izvor Youtube <a href="https://www.youtube.com/watch?v=qrduUUdxBSY" target="_blank"><span class="italic">CSS Units</span></a></p>
+			</div>
+		</div>
+
+		<div class="col col--1-of-3">
+			<div class="code">
+				<pre class="code__elements code__elements--css">
+					<p class="code__paragraph">Primjer <span class="italic">CSS font (rem)</span>.</p>
+					<div class="code__elements--whitespace">
+						<code>
+							&ltdiv class=”example”&gt
+								&nbsp;&ltdiv class=”rem”&gt
+								&nbsp;&lt/div&gt
+							&lt/div&gt
+
+							&ltstyle&gt
+								&nbsp;:root {
+									&nbsp;&nbsp;&nbsp;font-size: 10px;
+								&nbsp;}
+								&nbsp;.rem {
+									&nbsp;&nbsp;&nbsp;width: rem; /* 1 x 10px */
+									&nbsp;&nbsp;&nbsp;height: 1rem;
+									&nbsp;&nbsp;&nbsp;background: hsla(196, 100%, 55%, 0.3);
+								&nbsp;}
+							&lt/style&gt
+						</code>
+					</div>
+				</pre>
+				<p class="code__source">Izvor Youtube <a href="https://www.youtube.com/watch?v=qrduUUdxBSY" target="_blank"><span class="italic">CSS Units</span></a></p>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col col--6-of-12 col--m-1-of-3 col--s-1-of-1 col--centered">
+			<h4 class="title__sub">Apsolutne <span class="italic">CSS</span> mjerene jedinice</h4>
+			<p class="css__intro--relative">Apsolutne mijerne jedinice su dobile svoje ime zato sto ne baziraju svoju veličinu u odnosu na roditeljski element,ili veličinu fonta,vec je baziraju na stvarni mjernim jedinicama (cm, mm, in itd.).</p>
+			<div class="code">
+				<pre class="code__elements code__elements--css">
+					<p class="code__paragraph">Primjer <span class="italic">CSS</span> apsolutne mjerene jedinice.</p>
+					<div class="code__elements--whitespace">
+						<code>
+							&ltdiv class=”example”&gt
+								&nbsp;&ltdiv class=”in”&gt 3 Inches &lt/div&gt
+								&nbsp;&ltdiv class=”cm”&gt 3 Centimeters &lt/div&gt
+								&nbsp;&ltdiv class=”mm”&gt 3 Milimeters &lt/div&gt
+								&nbsp;&ltdiv class=”pt”&gt 3 Points &lt/div&gt
+								&nbsp;&ltdiv class=”pc”&gt 3 Picas &lt/div&gt
+								&nbsp;&ltdiv class=”px”&gt 3 Pixels &lt/div&gt
+							&lt/div&gt
+							
+							&ltstyle&gt
+								&nbsp;.example > div {
+									&nbsp;&nbsp;&nbsp;padding: 20px 0;
+									&nbsp;&nbsp;&nbsp;font-size: 10px;
+									&nbsp;&nbsp;&nbsp;white-space: nowrap;
+									&nbsp;&nbsp;&nbsp;background: hsla(196, 100%, 55%, 0.3);
+								&nbsp;}
+								&nbsp;.in { width: 3in; }
+								&nbsp;.cm { width: 3cm; }
+								&nbsp;.mm { width: 3mm; }
+								&nbsp;.pt { width: 3pt; }
+								&nbsp;.pc { width: 3pc; }
+								&nbsp;.px { width: 300px; height: 300px; }
+							&lt/style&gt
+						</code>
+					</div>
+				</pre>
+				<p class="code__source">Izvor Youtube <a href="https://www.youtube.com/watch?v=qrduUUdxBSY" target="_blank"><span class="italic">CSS Units</span></a></p>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,141 @@
+<div class="row">
+	<h2 class="col col--12-of-12 col--centered title__sub">Bootstrap Forms</h2>
+
+	<div class="row">
+		<div class="col col--6-of-12 col--push-3-of-12">
+			<div class="bootstrap">
+				<p class="bootstrap__intro">Pravljenje forme u <span class="italic">Bootstrap CSS front-end framework</span>-u je veoma lako uz vrlo jednostavan <span class="italic">HTML markup</span> i vec gotove golobalne predefinisane <span class="italic">bootstrap</span> klase. Postoje tri tipa <span class="italic">boostrap</span> formi,a to su:</p>
+				<ol class="bootstrap__order">
+					<li>Vertikalna forma koja je (<span class="italic">default</span>) tj. uobicajena</li>
+					<li>Horizontalna forma</li>
+					<li><span class="italic">In-line</span> forma </li>
+				</ol>
+
+				<p class="bootstrap__intro--second">Da bi napravili osnovnu ali i svaku drugu <span class="italic">boostrap</span> formu,moramo uraditi sledece.</p>
+				<ul class="bootstrap__unorder">
+					<li>Dodati <span class="italic">HTML</span> atribut <span class="italic">role</span> sa vrijednošću ‘form’ u <span class="italic">HTML form tag &ltform role=”form”&gt</span> (Ovaj atribut omogućava bolji pristup ljudima koji koriste <span class="italic">screen readers</span>)</li>
+					<li>Okružiti <span class="italic">tag labels</span> i <span class="italic">input</span> (ulazna) polja forme u <span class="italic">div tag</span> sa klasom <span class="italic">‘.form-group’</span> (ovo je potrebno za optimalni razmak)</li>
+					<li>Dodtai klasu <span class="italic">‘.from-control’</span> svim tekstualni ulaznim poljima forme<span class="italic"> &lttextarea&gt, &ltinput&gt, &ltselect&gt</span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col col--6-of-12">
+			<h3 class="title__sub">Verikalna ili osnovna forma</h3>
+			<div class="code code__elements--text">
+				<pre class="code__elements code__elements--css">
+					<p class="code__paragraph">Primjer verikalne ili osnovne forme</p>
+					<div class="code__elements--whitespace">
+						<code class="html">
+							&ltform role="form"&gt
+								&nbsp;&ltdiv class="form-group"&gt
+									&nbsp;&nbsp;&ltlabel for="email">Email address:&lt/label&gt
+									&nbsp;&nbsp;&ltinput type="email"class="form-control" id="email"&gt
+								&nbsp;&lt/div&gt
+
+								&nbsp;&ltdiv class="form-group"&gt
+									&nbsp;&nbsp;&ltlabel for="pwd"&gtPassword:&lt/label&gt
+									&nbsp;&nbsp;&ltinput type="password" class="form-control" id="pwd"&gt
+								&nbsp;&lt/div&gt
+
+								&nbsp;&ltdiv class="checkbox&gt
+									&nbsp;&nbsp;&ltlabel&gt&ltinput type="checkbox"&gt Remember me&lt/label&gt
+								&nbsp;&lt/div&gt
+								&nbsp;&ltbutton type="submit" class="btn btn-default"&gtSubmit&lt/button&gt
+							&lt/form&gt
+						</code>
+					</div>
+				</pre>
+				<p class="code__source">Izvor W3schools <a href="http://www.w3schools.com/bootstrap/bootstrap_forms.asp" target="_blank"><span class="italic">Vertical Form</span></a></p>
+			</div>
+		</div>
+		<div class="col col--6-of-12">
+			<h3 class="title__sub"><span class="italic">Inline</span> forma</h3>
+			<div class="bootstrap">
+				<p class="bootstrap__intro">Da bi kreirali formu gdje su svi elementi <span class="italic">inline</span>,lijevo poravnati i pored njih su imana ulaznih polja <span class="italic">label</span>. Ovo se samo odnosi na forme gdje je veličina <span class="italic">viewporta</span> tj. veličina <span class="italic">display</span>-a minimalno 768px široka. Da bi napravili <span class="italic">inline</span> formu potrebno je u <span class="italic">form</span> element dodati klasu <span class="italic">‘.form-inline’</span>.</p>
+
+				<div class="code">
+					<pre class="code__elements code__elements--form">
+						<p class="code__paragraph--form">Primjer <span class="italic">Inline</span> forme</p>
+						<div class="code__elements--whitespace">
+							<code class="html">
+								&ltform class="form-inline" role="form"&gt
+									&nbsp;&ltdiv class="form-group"&gt
+										&nbsp;&nbsp;&ltlabel for="email">Email address:&lt/label&gt
+										&nbsp;&nbsp;&ltinput type="email" class="form-control" id="email"&gt
+									&nbsp;&lt/div&gt
+
+									&nbsp;&ltdiv class="form-group"&gt
+										&nbsp;&nbsp;&ltlabel for="pwd">Password:&lt/label&gt
+										&nbsp;&nbsp;&ltinput type="password" class="form-control" id="pwd"&gt
+									&nbsp;&lt/div&gt
+
+									&nbsp;&ltdiv class="checkbox"&gt
+										&nbsp;&nbsp;&ltlabel>&ltinput type="checkbox"&gt Remember me&lt/label&gt
+									&nbsp;&lt/div>
+									&nbsp;&nbsp;&ltbutton type="submit" class="btn btn-default"&gtSubmit&lt/button&gt
+								&lt/form&gt
+							</code>
+						</div>
+					</pre>
+					<p class="code__source">Izvor W3schools <a href="http://www.w3schools.com/bootstrap/bootstrap_forms.asp" target="_blank"><span class="italic">Inline Form</span></a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col col--8-of-12 col--push-2-of-12">
+			<h3 class="title__sub">Horizontalna forma</h3>
+			<div class="bootstrap">
+				<p class="bootstrap__intro">Horizontalna forma izdvaja se od ostalih oblika forma,kako u veličini <span class="italic">HTML markup</span> tako i u prezentaciji forme. Da bi napravili formu koja koristi horizontalni izgled potrebno je uraditi sledeće:</p>
+
+				<ul class="bootstrap__unorder">
+					<li>Potrebno je dodati klasu <span class="italic">‘.form-horizontal’</span> u <span class="italic">form element</span></li>
+					<li>Okružiti <span class="italic">tag labels</span> i <span class="italic">input</span> (ulazna) polja forme u <span class="italic">div tag</span> sa klasom <span class="italic">‘.form-group’</span> </li>
+					<li>Dodati klasu <span class="italic">‘.control-label’</span> u <span class="italic">label</span> element</li>
+				</ul>
+			</div>
+			<div class="code">
+				<pre class="code__elements code__elements--css">
+					<p class="code__paragraph">Horizontalna forma</p>
+					<div class="code__elements--whitespace">
+						<code class="html">
+							&ltform class="form-horizontal" role="form"&gt
+								&nbsp;&ltdiv class="form-group"&gt
+									&nbsp;&nbsp;&nbsp;&ltlabel class="control-label col-sm-2" for="email"&gtEmail:&lt/label&gt
+									&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv class="col-sm-10"&gt
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltinput type="email" class="form-control" id="email" placeholder="Enter email"&gt
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt/div&gt
+								&nbsp;&lt/div&gt
+
+								&nbsp;&ltdiv class="form-group"&gt
+									&nbsp;&nbsp;&nbsp;&ltlabel class="control-label col-sm-2" for="pwd">Password:&lt/label&gt
+									&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv class="col-sm-10"&gt
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltinput type="password" class="form-control" id="pwd" placeholder="Enter password"&gt
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt/div&gt
+								&nbsp;&lt/div&gt
+
+								&nbsp;&ltdiv class="form-group"&gt 
+									&nbsp;&nbsp;&nbsp;&ltdiv class="col-sm-offset-2 col-sm-10"&gt
+										&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv class="checkbox"&gt
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltlabel&gt&ltinput type="checkbox"&gt Remember me&lt/label&gt
+										&nbsp;&nbsp;&nbsp;&nbsp;&lt/div&gt
+									&nbsp;&nbsp;&nbsp;&lt/div&gt
+								&nbsp;&lt/div&gt
+
+								&nbsp;&ltdiv class="form-group"&gt 
+									&nbsp;&nbsp;&nbsp;&ltdiv class="col-sm-offset-2 col-sm-10"&gt
+										&nbsp;&nbsp;&nbsp;&nbsp;&ltbutton type="submit" class="btn btn-default"&gtSubmit&lt/button&gt
+									&nbsp;&nbsp;&nbsp;&lt/div&gt
+								&nbsp;&lt/div&gt
+							&lt/form&gt
+						</code>
+					</div>
+				</pre>
+				<p class="code__source">Izvor W3schools <a href="http://www.w3schools.com/bootstrap/bootstrap_forms.asp" target="_blank"><span class="italic">Horizontal Form</span></a></p>
+			</div>
+		</div>
+	</div>
+</div>
