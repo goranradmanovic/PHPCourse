@@ -5,6 +5,6 @@ $(document).ready(function() {
 		window.val = $(this).attr("href");
 		// alert(window.val);
 
-		$(window.val).toggleClass('accordion-content--show', 'accordion-content');
+		$(window.val).toggleClass('accordion-content--show', 'accordion-content');	
 	});
 });
