@@ -1,3 +1,8 @@
+				<div class="row"> <!--Footer-->
+					<div class="col col-md-2 col-md-offset-5 ">
+						<p class="text-muted" style="margin-top: 180px;">&copy; PHP Course 2016</p>
+					</div>
+				</div>
 
 				<script src="http://maps.googleapis.com/maps/api/js"></script>
 				<script>

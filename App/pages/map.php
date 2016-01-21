@@ -1,4 +1,16 @@
-<?php 
+<?php
+	session_start();
+
+	require_once '../config/config.php';
+
+	//Provjera da li je korisnik ulogovan da bi mu mogli prikazati ovu stranicu
+
+	if ($_SESSION['user'] !== USERNAME)
+	{
+		header('Location: login.php');
+		die;
+	}
+
 	include_once '../include/header.php';
 	include_once '../include/nav.php';
 
@@ -22,7 +34,7 @@
 				$respo_json = file_get_contents($url); //Dohvatamao sadrzaj JSON fajla tj. odgovora od Google Mpas Servera
 
 				$resp = json_decode($respo_json, true); //Dekodiramo taj sadrzaj fajla
-
+               
 				//Provjeravamo da li je sadrzaj fajla tj. status OK
 				if ($resp['status'] == 'OK')
 				{	
@@ -40,12 +52,14 @@
 					}
 					else
 					{
-						return false; //Ako podaci ne postoje vracamo false vrijednost
+						//return false; //Ako podaci ne postoje vracamo false vrijednost
+						$errors[] = 'Please enter some valide city name address.';
 					}
 				}
 				else
 				{
-					return false; //Ako status nije OK vracamo false vrijednost
+					//return false; //Ako status nije OK vracamo false vrijednost
+					$errors[] = 'Something went wrong,please try again.';
 				}
 			}
 			else
@@ -89,6 +103,7 @@
 
 	<div class="row">
 		<div class="col col-md-6 col-md-offset-3">
+			<!--Google Mapa-->
 			<div class="google-map" id="googleMap" style="width:570px;height:380px;"></div>
 		</div>
 	</div>
